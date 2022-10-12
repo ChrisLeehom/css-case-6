@@ -1,0 +1,106 @@
+*{
+    box-sizing:border-box;
+}
+html, body{
+    height: 100%;
+     background-image: url("背景图片.png");  
+     background-repeat:no-repeat;
+
+}
+
+
+body {
+    margin:0;
+
+}
+
+/* [background|= "背景图片"]{
+    height: 100%;
+   opacity: 0.1;
+} */
+
+.topmenu {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    background-color:black;
+    /*四个li浮动后脱离了文档流 父容器ui失去了高度 
+    此时需要清理一下浮动，父元素没有高度就显示不了背景颜色*/
+    overflow:auto;
+}
+
+.topmenu li{
+    float:left;
+}
+
+.topmenu li a{
+    /* 将默认的行内元素设置为行内块元素，保证可以设置宽高 */
+    display:inline-block;
+    color:white;
+    text-align:center;
+    padding:16px;
+    text-decoration: none;
+
+}
+.topmenu li a.active{
+    background-color: #4ca8af;
+}
+.column{
+    float:left;
+    padding:15px;
+}
+/* p.pagefontsize{
+    font-size: 3px;
+    width:400px;
+} */
+/* 左侧菜单区域 */
+.sidemenu{
+    width:25%;
+}
+/* 内容区域 */
+.content{
+    width:75%;
+    background-color: rgb(163, 137, 137,0.86);
+
+}
+.sidemenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+
+}
+.sidemenu li a{
+    margin-bottom: 4px;
+    display: block;
+    padding:8px;
+    background-color:black;
+    text-decoration: none;
+    color:white;
+}
+
+.sidemenu li a:hover{
+    background-color: #555;
+    color:white;
+
+}
+.sidemenu li a:active{
+    background-color: #1f00ba;
+    color:white;
+}
+.header
+{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 15px;
+
+}
+.footer
+{
+
+    background-color: black;
+    color: white;
+    padding:15px;
+    clear:both;
+
+}
